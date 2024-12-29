@@ -11,7 +11,7 @@
         console.log("1. Количество символов в тексте: " + originalText.length);
         const result = originalText.replace(";","\n");
         console.log("2. Текст с переносами: " + result);
-        const substring = result.replace("","\s");
+        const substring = result.trim();
         console.log("3. Текст с удалёнными пробелами: " + substring);
         const newText = result.substring(26,50);
         console.log("4. Извлечение подстроки: " + newText);
@@ -19,7 +19,7 @@
         console.log("5.Замена 'клён' на 'дубе': " + replasedText);
         const replasedText2 = result.toUpperCase();
         console.log("6. Строка result в верхнем регистре: "+ replasedText2);
-        const replasedText3 = result.trim();
+        const replasedText3 = result.replace(/клён/g, "дуб");
         console.log("7. Замена 'клён' на 'дуб' (все вхождения) в переменной: " + replasedText3);
         const index = 'море'.indexOf('р');
         console.log("8. Индекс первого вхождения 'моря': " + index);
